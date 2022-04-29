@@ -1,0 +1,11 @@
+{
+  "version": "0.2",
+  "ignorePaths": [
+    ".devcontainer",
+    "node_modules"
+  ],
+  "words": [
+    "vite",
+    "vitejs"
+  ]
+}

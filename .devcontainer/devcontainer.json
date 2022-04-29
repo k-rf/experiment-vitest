@@ -1,0 +1,21 @@
+{
+  "name": "practice_vitest",
+  "remoteUser": "practice_vitest",
+  "dockerComposeFile": "../docker-compose.dev.yaml",
+  "service": "frontend",
+  "postAttachCommand": "yarn install",
+  "workspaceFolder": "/workspaces",
+  "overrideCommand": true,
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "extr0py.vscode-relative-line-numbers",
+    "irongeek.vscode-env",
+    "mhutchie.git-graph",
+    "mutantdino.resourcemonitor",
+    "streetsidesoftware.code-spell-checker",
+    "yzhang.markdown-all-in-one",
+    "ZixuanChen.vitest-explorer"
+  ]
+}

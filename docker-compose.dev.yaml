@@ -1,0 +1,30 @@
+version: '3.9'
+
+volumes:
+  bash_history:
+    name: ${BASH_HISTORY_VOLUME_NAME}
+  vscode_extensions:
+    name: ${VSCODE_EXTENSIONS_VOLUME_NAME}
+
+services:
+  frontend:
+    build:
+      context: .devcontainer
+      args:
+        - REMOTE_USER=${REMOTE_USER}
+        - REMOTE_WORKSPACES=${REMOTE_WORKSPACES}
+        - REMOTE_HOME=${REMOTE_HOME}
+    container_name: ${CONTAINER_NAME}
+    working_dir: ${REMOTE_WORKSPACES}
+    user: ${REMOTE_USER}
+    tty: true
+    volumes:
+      - type: bind
+        source: .
+        target: ${PROJECT_ROOT}
+      - type: volume
+        source: bash_history
+        target: /commandhistory
+      - type: volume
+        source: vscode_extensions
+        target: ${HOME}/.vscode-server/extensions
