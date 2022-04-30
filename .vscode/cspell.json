@@ -6,6 +6,7 @@
   ],
   "words": [
     "vite",
-    "vitejs"
+    "vitejs",
+    "vitest"
   ]
 }
