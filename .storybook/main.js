@@ -1,6 +1,6 @@
 const { mergeConfig } = require("vite");
 
-/** @types { import("@storybook/core-common").StorybookConfig } */
+/** @type { import("@storybook/core-common").StorybookConfig } */
 const config = {
   framework: "@storybook/react",
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],

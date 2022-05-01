@@ -10,6 +10,13 @@ export default defineConfig({
     globals: true,
     environment: "happy-dom",
     setupFiles: "vitest.setup.ts",
-    include: ["src/**/*.spec.{ts,tsx}"],
+    testNamePattern: "storyshots.spec.ts",
+    exclude: [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/cypress/**",
+      "**/.{idea,git,cache,output,temp}/**",
+      "src/**",
+    ],
   },
 });
