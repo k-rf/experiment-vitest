@@ -1,20 +1,27 @@
-const { mergeConfig } = require("vite");
-
 /** @type { import("@storybook/core-common").StorybookConfig } */
 const config = {
   framework: "@storybook/react",
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  // core: {
+  //   builder: "@storybook/builder-vite",
+  // },
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-storyshots",
   ],
   features: {
     interactionsDebugger: true,
+    modernInlineRender: true,
   },
-  // viteFinal: async (config, { configType }) => {
-  //   return mergeConfig(config, { configType });
+  // webpackFinal: (config) => {
+  //   delete config.resolve.alias["emotion-theming"];
+  //   delete config.resolve.alias["@emotion/styled"];
+  //   delete config.resolve.alias["@emotion/core"];
+
+  //   config.node = { fs: "empty" };
+
+  //   return config;
   // },
 };
 
